@@ -78,7 +78,7 @@ Deciding which css has to be loaded to show content the 'above the fold' content
 
 #### Before
 
-![audit before critical css](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/0.auditbeforecritical css.png)
+![audit before critical css](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/0.auditbeforecriticalcss.png)
 
 ![before critical css](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/0.beforecriticalcss.png)
 
