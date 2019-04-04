@@ -2,7 +2,7 @@
 
 Disclaimer: Every audit was taken with a slow 3g connection in the Chrome developer tools.
 
-![chart](/Users/marcelfleuren/Desktop/Minor/project2/assets/chart.png)
+![chart](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/chart.png)
 
 ## The assignment
 
@@ -48,7 +48,7 @@ _percieved performance_
 
 
 
-###The steps I made:
+### The steps I made:
 
 - Critical css & font-face:swap
 
@@ -78,17 +78,17 @@ Deciding which css has to be loaded to show content the 'above the fold' content
 
 #### Before
 
-![audit before critical css](/Users/marcelfleuren/Desktop/Minor/project2/assets/0. audit before critical css.png)
+![audit before critical css](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/0. audit before critical css.png)
 
-![before critical css](/Users/marcelfleuren/Desktop/Minor/project2/assets/0. before critical css.png)
+![before critical css](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/0. before critical css.png)
 
 ### After
 
-![audit after critical css](/Users/marcelfleuren/Desktop/Minor/project2/assets/1. audit after critical css.png)
+![audit after critical css](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/1. audit after critical css.png)
 
 
 
-![after critical css](/Users/marcelfleuren/Desktop/Minor/project2/assets/1. after critical css.png)
+![after critical css](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/1. after critical css.png)
 
 
 
@@ -102,11 +102,11 @@ Compression is a middleware that that will attempt to compress response bodies t
 
 
 
-![2. after compression](/Users/marcelfleuren/Desktop/Minor/project2/assets/2. after compression.png)
+![2. after compression](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/2. after compression.png)
 
 
 
-![2. audit after compression](/Users/marcelfleuren/Desktop/Minor/project2/assets/2. audit after compression.png)
+![2. audit after compression](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/2. audit after compression.png)
 
 
 
@@ -120,7 +120,7 @@ the _intersection observer api_ in the browser lets us execute proper lazy loadi
 
 ####after
 
-![3. after intersection observer lazy loading](/Users/marcelfleuren/Desktop/Minor/project2/assets/3. after intersection observer lazy loading.png)
+![3. after intersection observer lazy loading](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/3. after intersection observer lazy loading.png)
 
 ### image optimisation to next gen format
 
@@ -142,7 +142,7 @@ Using `gulp-min` and `gulp-webp`, the gulp task can easily optimze the images. T
 
 #### after
 
-![4. after image next gen format](/Users/marcelfleuren/Desktop/Minor/project2/assets/4. after image next gen format.png)
+![4. after image next gen format](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/4. after image next gen format.png)
 
 ### Preloading fonts
 
@@ -153,7 +153,7 @@ By telling the browser that we definetly need that font, the browser can start d
 
 #### after
 
-![5. after preloading fonts](/Users/marcelfleuren/Desktop/Minor/project2/assets/5. after preloading fonts.png)
+![5. after preloading fonts](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/5. after preloading fonts.png)
 
 ### minify css and JS
 
@@ -193,7 +193,7 @@ gulp.task('min-js', function () {
 
 It vastly improved the first contentful paint and the first meaningful paint.
 
-#### after![6. after css and js min](/Users/marcelfleuren/Desktop/Minor/project2/assets/6. after css and js min.png)
+#### after![6. after css and js min](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/6. after css and js min.png)
 
 ### Caching
 
@@ -209,14 +209,14 @@ Caching only has real effect after the first page load. But it will make loading
 
 #### after
 
-![7. audit after caching](/Users/marcelfleuren/Desktop/Minor/project2/assets/7. audit after caching.png)
+![7. audit after caching](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/7. audit after caching.png)
 
-![7. after caching](/Users/marcelfleuren/Desktop/Minor/project2/assets/7. after caching.png)
+![7. after caching](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/7. after caching.png)
 
 
 
 ### Result
 
-![result](/Users/marcelfleuren/Desktop/Minor/project2/assets/result.png)
+![result](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/result.png)
 
 As a result. The full pageload is brought back to around 4.7s.
