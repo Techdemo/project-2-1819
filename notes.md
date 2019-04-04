@@ -1,0 +1,14 @@
+# top 5
+- performance verbeteren
+- acessibility
+- critical css path
+- stylesheets deferren
+- Service Twerker
+- contrast verbeteren
+- Preload fonts
+- efficiently encode images. Google lighthouse
+- HTTP caching
+- first meaningful paint vervroegen
+- Create skip to content button
+- lazy loading
+- font display: swap

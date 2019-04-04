@@ -1,21 +1,21 @@
 # Projectweek 2
 
-Disclaimer: Every audit was taken with a slow 3g connection in the Chrome developer tools.
+Disclaimer: Every audit was taken with a slow 3g connection in the Chrome developer tools. 
 
 ![chart](/Users/marcelfleuren/Desktop/Minor/project2/assets/chart.png)
 
 ## The assignment
 
-Optimize the website volkswagen.nl on a better performance and accessibility.
+Optimize the website volkswagen.nl on a better performance and accessibility. 
 
 ## Problem
 
-When loading the website on my iphone 6, the page takes about 12 to 15 seconds to display something useful. I, as a user of the site, was pretty annoyed it took so long to load in the website.
+When loading the website on my iphone 6, the page takes about 12 to 15 seconds to display something useful. I, as a user of the site, was pretty annoyed it took so long to load in the website. 
 
 ## Goal
 
-Reduce the time of the first meaningful paint, first contentful paint and thus, time to interactive.
-While also giving the user a better sense of percieved performance.
+Reduce the time of the first meaningful paint, first contentful paint and thus, time to interactive. 
+While also giving the user a better sense of percieved performance. 
 
 ## Index
 
@@ -64,15 +64,15 @@ _percieved performance_
 
 - Caching
 
-
+  
 
 ### Critical css & font-face: swap
 
-Deciding which css has to be loaded to show content the 'above the fold' content is key in optimizing the critical render path. The css needed for the above the fold content is place between `<style></style>` in the head of the html. Every other `<style>` or `<script>` was then moved to before the `</body>` .
+Deciding which css has to be loaded to show content the 'above the fold' content is key in optimizing the critical render path. The css needed for the above the fold content is place between `<style></style>` in the head of the html. Every other `<style>` or `<script>` was then moved to before the `</body>` . 
 
 
 
-`@font-face` is first removed from the css sheet and placed in a seperate fonts.css file. More on this later.
+`@font-face` is first removed from the css sheet and placed in a seperate fonts.css file. More on this later. 
 
 `font-display: swap`  Instructs the browser to use the fallback font to display the text until the custom font has fully downloaded. This is also known as a "flash of unstyled text".
 
@@ -112,7 +112,7 @@ Compression is a middleware that that will attempt to compress response bodies t
 
 ### Intersection observer for extra percieved performance
 
-The current website makes use of lazy loading. The images have a fade in effect on the page load. But this is only declared in the css. So the images still get loaded on the initial page load.
+The current website makes use of lazy loading. The images have a fade in effect on the page load. But this is only declared in the css. So the images still get loaded on the initial page load. 
 
 With a proper lazy loading effect, the images get fetched only if the images are in the viewport.
 
@@ -124,9 +124,9 @@ the _intersection observer api_ in the browser lets us execute proper lazy loadi
 
 ### image optimisation to next gen format
 
-One problem on the current Volkswagen site is that the images are not in a next-gen format and are not properly sized. To get extra performance points, the images have to properly sized for the website.
+One problem on the current Volkswagen site is that the images are not in a next-gen format and are not properly sized. To get extra performance points, the images have to properly sized for the website. 
 
-To convert images to the next-gen format `webP`  , I've written a Gulp taks to optimize the images for me.
+To convert images to the next-gen format `webP`  , I've written a Gulp taks to optimize the images for me. 
 
 ```
 gulp.task('images', function () {
@@ -138,7 +138,7 @@ gulp.task('images', function () {
 });
 ```
 
-Using `gulp-min` and `gulp-webp`, the gulp task can easily optimze the images. The results of this are noticeable in Time to interactive and the estimated input latency. It also increases the speed index a little bit.
+Using `gulp-min` and `gulp-webp`, the gulp task can easily optimze the images. The results of this are noticeable in Time to interactive and the estimated input latency. It also increases the speed index a little bit. 
 
 #### after
 
@@ -146,10 +146,10 @@ Using `gulp-min` and `gulp-webp`, the gulp task can easily optimze the images. T
 
 ### Preloading fonts
 
-By using the Preload on a `<link>` we can tell the browser that we definitly need to start download webfonts earlier on the page rendering than the default let us.
-The default is that the site will load all of the html and css before it will load in webfonts. Because  browsers only load web fonts when there is a css selector for a connect DOM node.
+By using the Preload on a `<link>` we can tell the browser that we definitly need to start download webfonts earlier on the page rendering than the default let us. 
+The default is that the site will load all of the html and css before it will load in webfonts. Because  browsers only load web fonts when there is a css selector for a connect DOM node. 
 
-By telling the browser that we definetly need that font, the browser can start downloading the font much earlier in the proces. The results are with mixed feelings. It raised the time of the first contentful paint and the first meaningful paint but it improved the percieved performance of the website.
+By telling the browser that we definetly need that font, the browser can start downloading the font much earlier in the proces. The results are with mixed feelings. It raised the time of the first contentful paint and the first meaningful paint but it improved the percieved performance of the website. 
 
 #### after
 
@@ -157,9 +157,9 @@ By telling the browser that we definetly need that font, the browser can start d
 
 ### minify css and JS
 
-Css and JS are minified on the current volkswagen.nl. But it wasn't minified on my local machine. And also, I want to touch this current issue on the live site. It still loads in Jquery and a ton of third-party scripts. My advice would be to validate which third-party script is still necessary to use on the live site.
+Css and JS are minified on the current volkswagen.nl. But it wasn't minified on my local machine. And also, I want to touch this current issue on the live site. It still loads in Jquery and a ton of third-party scripts. My advice would be to validate which third-party script is still necessary to use on the live site. 
 
-I've minified my css and js with the following gulp tasks:
+I've minified my css and js with the following gulp tasks: 
 
 ```
 gulp.task('min-css', function () {
@@ -191,13 +191,13 @@ gulp.task('min-js', function () {
 })
 ```
 
-It vastly improved the first contentful paint and the first meaningful paint.
+It vastly improved the first contentful paint and the first meaningful paint. 
 
 #### after![6. after css and js min](/Users/marcelfleuren/Desktop/Minor/project2/assets/6. after css and js min.png)
 
 ### Caching
 
-After all of the minification and optimisation it is time to incorporate HTTP-caching. Every time the server sends a response we have to include the correct HTTP_header with information about how long the browser has to store the data in the browsers's cache. The http-header contains information about the type of content, the length and some instructions about the cache memory.
+After all of the minification and optimisation it is time to incorporate HTTP-caching. Every time the server sends a response we have to include the correct HTTP_header with information about how long the browser has to store the data in the browsers's cache. The http-header contains information about the type of content, the length and some instructions about the cache memory. 
 
 ```
 app.use((req, res, next) => {
@@ -205,7 +205,7 @@ app.use((req, res, next) => {
 });
 ```
 
-Caching only has real effect after the first page load. But it will make loading the page much faster for returning visitors.
+Caching only has real effect after the first page load. But it will make loading the page much faster for returning visitors. 
 
 #### after
 
@@ -219,4 +219,4 @@ Caching only has real effect after the first page load. But it will make loading
 
 ![result](/Users/marcelfleuren/Desktop/Minor/project2/assets/result.png)
 
-As a result. The full pageload is brought back to around 4.7s.
+As a result. The full pageload is brought back to around 4.7s. 

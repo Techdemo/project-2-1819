@@ -1,0 +1,70 @@
+@font-face{
+    font-family:VWHeadWeb;
+    src:url(../../../fonts/VW-PKW/VWHeadWeb-Light.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWHeadWeb-Light.woff) format("woff");
+    font-weight:300;
+    font-style:normal;
+    font-display: swap;
+}
+@font-face{
+    font-family:VWHeadWeb;
+    src:url(../../../fonts/VW-PKW/VWHeadWeb-Regular.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWHeadWeb-Regular.woff) format("woff");
+    font-weight:400;
+    font-style:normal;
+    font-display: swap;
+}
+@font-face{
+    font-family:VWHeadWeb;
+    src:url(../../../fonts/VW-PKW/VWHeadWeb-RegularItalic.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWHeadWeb-RegularItalic.woff) format("woff");
+    font-weight:400;
+    font-style:italic;
+    font-display: swap;
+}
+@font-face{
+    font-family:VWHeadWeb;
+    src:url(../../../fonts/VW-PKW/VWHeadWeb-Bold.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWHeadWeb-Bold.woff) format("woff");
+    font-weight:700;
+    font-style:normal;
+    font-display: swap;
+}
+@font-face{
+    font-family:VWHeadWeb;
+    src:url(../../../fonts/VW-PKW/VWHeadWeb-BoldItalic.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWHeadWeb-BoldItalic.woff) format("woff");
+    font-weight:700;
+    font-style:italic;
+    font-display: swap;
+}
+@font-face{
+    font-family:VWHeadWeb;
+    src:url(../../../fonts/VW-PKW/VWHeadWeb-ExtraBold.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWHeadWeb-ExtraBold.woff) format("woff");
+    font-weight:800;
+    font-style:normal;
+    font-display: swap;
+}
+@font-face{
+    font-family:VWTextWeb;
+    src:url(../../../fonts/VW-PKW/VWTextWeb-Regular.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWTextWeb-Regular.woff) format("woff");
+    font-weight:400;
+    font-style:normal;
+    font-display: swap;
+}
+@font-face{
+    font-family:VWTextWeb;
+    src:url(../../../fonts/VW-PKW/VWTextWeb-RegularItalic.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWTextWeb-RegularItalic.woff) format("woff");
+    font-weight:400;
+    font-style:italic;
+    font-display: swap;
+}
+@font-face{
+    font-family:VWTextWeb;
+    src:url(../../../fonts/VW-PKW/VWTextWeb-Bold.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWTextWeb-Bold.woff) format("woff");
+    font-weight:700;
+    font-style:normal;
+    font-display: swap;
+}
+@font-face{
+    font-family:VWTextWeb;
+    src:url(../../../fonts/VW-PKW/VWTextWeb-BoldItalic.woff2) format("woff2"),url(../../../Fonts/VW-PKW/VWTextWeb-BoldItalic.woff) format("woff");
+    font-weight:700;
+    font-style:italic;
+    font-display: swap;
+}
