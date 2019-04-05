@@ -46,7 +46,7 @@ The Time to Interactive (TTI) metric measures how long it takes a page to become
 
 _percieved performance_
 
-
+Giving the user visuals clues that the website is handling the users requests. It this way, it seems as the website is loading faster than it is doing in reality.
 
 ### The steps I made:
 
@@ -220,4 +220,19 @@ Caching only has real effect after the first page load. But it will make loading
 
 ![result](https://raw.githubusercontent.com/Techdemo/project-2-1819/master/assets/result.png)
 
-As a result. The full pageload is brought back to around 4.7s.
+As a result. The full pageload is brought back to around 4.7s. Also, the percieved performance increased. For a user it seems that the webpage is loading faster than the reality is.
+
+
+
+### Recommendations
+
+- keep the first meaningful paint low as possible.
+
+- Implement service workers to handle the caching of static files and third party scripts.
+
+- Do you really need Jquery? Do you really need GSAP or other animation libraries? These kinds of libraries are very heavy on the client. Use some Vanilla JS for your requirements.
+
+- properly size all the images and encode them to next-gen formats.
+
+
+

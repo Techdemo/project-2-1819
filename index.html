@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>presentation</title>
+    <link rel="stylesheet" href="pres.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <section>
+            <img class="big" src="./assets/0.auditbeforecriticalcss.png">
+        </section>
+        <section>
+            <h1>The assignment</h1>
+            <h3>
+                Optimize the website volkswagen.nl on a better performance and accessibility.
+            </h3>
+            <p>By Marcel Fleuren</p>
+        </section>
+        <section>
+            <img class="small" src="./presAssets/0.beforecriticalcss.png">
+        </section>
+        <section>
+            <h2>The Problem</h2>
+            <p>
+                When loading the website on my iphone 6, the page takes about 12 to 15 seconds to display something
+                useful. I, as a user
+                of the site, was pretty annoyed it took so long to load in the website..
+            </p>
+        </section>
+        <section>
+            <div style="width:100%;height:0;padding-bottom:52%;position:relative;"><iframe
+                    src="https://giphy.com/embed/oEwHb3zl2pumY" width="100%" height="100%" style="position:absolute"
+                    frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+        </section>
+        <section>
+            <h2>The Solution</h2>
+            <p>
+                Reduce the time of the first meaningful paint, first contentful paint and thus, time to interactive.
+                While also giving the user a better sense of percieved performance.
+            </p>
+        </section>
+        <section>
+            <ul>
+                <li>Critical Css and font-face: swap</li>
+                <li>Compression</li>
+                <li>Intersection Observer</li>
+                <li>Image optimisation</li>
+                <li>Preloading fonts</li>
+                <li>Caching</li>
+            </ul>
+        </section>
+        <section>
+
+        </section>
+        <section>
+            <h2>Critical Css and font-face: swap</h2>
+            <h3>and the critical render path</h3>
+        </section>
+        <section>
+
+        </section>
+        <section>
+            <h3>
+                Deciding which css has to be loaded to show content the 'above the fold' content is key in optimizing
+                the critical
+                render path.
+            </h3>
+        </section>
+        <section>
+
+        </section>
+        <section>
+            <div style="width:100%;height:0;padding-bottom:71%;position:relative;"><iframe
+                    src="https://giphy.com/embed/YhRUf5E5NLGAE" width="100%" height="100%" style="position:absolute"
+                    frameBorder="0" class="giphy-embed big" allowFullScreen></iframe></div>
+        </section>
+        <section>
+            <h3>Font-face:swap</h3>
+            <p>Instructs the browser to use the fallback font to display the text until the custom font has fully
+                downloaded. This is
+                also known as a "flash of unstyled text".</p>
+        </section>
+        <section>
+            <img class="big" src="./presAssets/1.auditaftercriticalcss.png">
+        </section>
+        <section>
+            <h3>first contentful paint went from 3.2s to 1.4s</h3>
+        </section>
+        <section>
+            <h3>Compression</h3>
+            <p>There are different types of compression, consider multiple variants.</p>
+        </section>
+        <section>
+            <h3>Brotli</h3>
+            <h3>Gzip</h3>
+        </section>
+        <section>
+            <h3>Intersection observer</h3>
+        </section>
+        <section>
+            <h3>For true lazy loading</h3>
+            <p>improvement of percieved performance</p>
+            <p>With a proper lazy loading effect, the images get fetched only if the images are in the viewport.
+                the intersection observer api in the browser lets us execute proper lazy loading functions. I've
+                implemented the lazy
+                loading function on images below the fold. This reduced only the Time to Interactive.</p>
+        </section>
+        <section>
+            <img class="big" src="./presAssets/3.afterintersectionobserverlazyloading.png">
+        </section>
+        <section>
+            <p>reduction Time to interactive of 5s</p>
+        </section>
+        <section>
+            <h3>image optimisation to next gen format</h3>
+        </section>
+        <section>
+            <p>
+                One problem on the current Volkswagen site is that the images are not in a next-gen format and are not
+                properly sized.
+                To get extra performance points, the images have to properly sized for the website.
+            </p>
+        </section>
+        <section>
+            <code>
+                                gulp.task('images', function () {
+                                    return gulp.src('./public/imagesOld/**/*')
+                                    .pipe(imagemin({ progressive: true }))
+                                    .pipe(gulp.dest('./public/images/'))
+                                    .pipe(webp())
+                                    .pipe(gulp.dest('./public/images/'))
+                                });
+                            </code>
+        </section>
+        <section>
+            <h3>Gulp!</h3>
+        </section>
+        <section>
+            <img class="big" src="./presAssets/4.afterimagenextgenformat.png">
+        </section>
+        <section>
+            <p>reduced time to interactive and estimated input latency</p>
+        </section>
+        <section>
+            <h3>Preloading fonts</h3>
+            <p>By using the Preload on a
+                link tag, we can tell the browser that we definitly need to start download webfonts earlier on the page
+                rendering
+                than the
+                default let us.</p>
+        </section>
+        <section>
+        </section>
+        <section>
+            <img class="big" src="./presAssets/5.afterpreloadingfonts.png">
+        </section>
+        <section>
+            <p>slight increase in the first contentful paint. The rest decreasedy</p>
+        </section>
+        <section>
+            <h3>HTTP Caching</h3>
+            <p>Every time the server sends a response we have to include the correct HTTP_header with information about
+                how long the
+                browser has to store the data in the browsers's cache. The http-header contains information about the
+                type of content,
+                the length and some instructions about the cache memory.</p>
+        </section>
+        <section>
+
+        </section>
+        <section>
+            <code>
+                                    app.use((req, res, next) => {
+                                    res.setHeader('Cache-Control', 'max-age=' + 365 * 24 * 60 * 60); next();
+                                    });
+                                </code>
+        </section>
+        <section>
+            <p>Caching only has real effect after the first page load. But it will make loading the page much faster for
+                returning
+                visitors.</p>
+        </section>
+        <section>
+            <img class="big" src="./presAssets/7.auditaftercaching.png">
+        </section>
+        <section>
+            <h3>Http-caching</h3>
+            <p>After the needed requests are done, the first contentful paint will be 0s</p>
+        </section>
+
+        <section>
+            <img class="big" src="./presAssets/chart.png">
+        </section>
+        <section>
+            <h3>The results</h3>
+            <p>After the needed requests are done, the first contentful paint will be 0s</p>
+        </section>
+    </div>
+</body>
+
+</html>
